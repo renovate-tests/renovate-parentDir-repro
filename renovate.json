@@ -1,0 +1,41 @@
+{
+  "extends": ["config:js-app", "docker:enableMajor", "default:pinDigestsDisabled"],
+  "automerge": false,
+  "prHourlyLimit": 0,
+  "devDependencies": {
+    "automerge": false,
+    "minor": {
+      "automerge": true
+    },
+    "patch": {
+      "automerge": true
+    }
+  },
+  "labels": ["renovate"],
+  "branchPrefix": "renovate/{{{parentDir}}}-",
+  "recreateClosed": true,
+  "packageRules": [
+    {
+      "packagePatterns": ["^eslint", "prettier", "pretty-quick"],
+      "groupName": "lint"
+    },
+    {
+      "packagePatterns": ["^react|-react"],
+      "groupName": "react"
+    },
+    {
+      "packagePatterns": ["^babel|^@babel|-babel"],
+      "excludePackageNames": ["babel-loader"],
+      "groupName": "babel"
+    },
+    {
+      "excludePackageNames": ["react-hot-loader"],
+      "packagePatterns": ["^webpack|-webpack", "-loader"],
+      "groupName": "webpack"
+    },
+    {
+      "packagePatterns": ["^jest|^enzyme"],
+      "groupName": "unit-testing"
+    }
+  ]
+}

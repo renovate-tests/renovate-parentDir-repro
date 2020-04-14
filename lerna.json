@@ -1,0 +1,6 @@
+{
+  "packages": ["app/core", "app/services/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

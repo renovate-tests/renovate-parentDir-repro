@@ -1,0 +1,11 @@
+{
+  "name": "@renovate-debug/service-b",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.9.9"
+  }
+}

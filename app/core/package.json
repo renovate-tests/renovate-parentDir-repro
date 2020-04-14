@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@renovate-debug/core",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.9.9",
+    "@renovate-debug/service-a": "0.0.1",
+    "@renovate-debug/service-b": "0.0.1"
+  }
+}
